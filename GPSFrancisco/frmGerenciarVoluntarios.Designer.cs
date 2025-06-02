@@ -68,6 +68,8 @@
             this.cbbAtribuicoes = new System.Windows.Forms.ComboBox();
             this.Status = new System.Windows.Forms.Label();
             this.lblAtribuicoes = new System.Windows.Forms.Label();
+            this.txtComplemento = new System.Windows.Forms.TextBox();
+            this.lblComplemento = new System.Windows.Forms.Label();
             this.pnlCRUD.SuspendLayout();
             this.gpbInformacoesVoluntario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbFoto)).BeginInit();
@@ -86,7 +88,7 @@
             this.pnlCRUD.Controls.Add(this.btnNovo);
             this.pnlCRUD.Location = new System.Drawing.Point(1, 496);
             this.pnlCRUD.Name = "pnlCRUD";
-            this.pnlCRUD.Size = new System.Drawing.Size(867, 65);
+            this.pnlCRUD.Size = new System.Drawing.Size(870, 65);
             this.pnlCRUD.TabIndex = 16;
             // 
             // btnVoltar
@@ -128,6 +130,7 @@
             this.btnPesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPesquisar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // btnExcluir
             // 
@@ -181,9 +184,12 @@
             this.btnNovo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNovo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // gpbInformacoesVoluntario
             // 
+            this.gpbInformacoesVoluntario.Controls.Add(this.txtComplemento);
+            this.gpbInformacoesVoluntario.Controls.Add(this.lblComplemento);
             this.gpbInformacoesVoluntario.Controls.Add(this.pcbFoto);
             this.gpbInformacoesVoluntario.Controls.Add(this.cbbEstado);
             this.gpbInformacoesVoluntario.Controls.Add(this.lblEstado);
@@ -208,7 +214,7 @@
             this.gpbInformacoesVoluntario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpbInformacoesVoluntario.Location = new System.Drawing.Point(7, 12);
             this.gpbInformacoesVoluntario.Name = "gpbInformacoesVoluntario";
-            this.gpbInformacoesVoluntario.Size = new System.Drawing.Size(851, 321);
+            this.gpbInformacoesVoluntario.Size = new System.Drawing.Size(864, 321);
             this.gpbInformacoesVoluntario.TabIndex = 0;
             this.gpbInformacoesVoluntario.TabStop = false;
             this.gpbInformacoesVoluntario.Text = "Informações do voluntário";
@@ -299,6 +305,7 @@
             this.mskCEP.Size = new System.Drawing.Size(92, 26);
             this.mskCEP.TabIndex = 7;
             this.mskCEP.ValidatingType = typeof(System.DateTime);
+            this.mskCEP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.mskCEP_KeyDown);
             // 
             // lblCEP
             // 
@@ -409,7 +416,7 @@
             this.gpbInformacoesDirigente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpbInformacoesDirigente.Location = new System.Drawing.Point(7, 339);
             this.gpbInformacoesDirigente.Name = "gpbInformacoesDirigente";
-            this.gpbInformacoesDirigente.Size = new System.Drawing.Size(851, 136);
+            this.gpbInformacoesDirigente.Size = new System.Drawing.Size(864, 136);
             this.gpbInformacoesDirigente.TabIndex = 11;
             this.gpbInformacoesDirigente.TabStop = false;
             this.gpbInformacoesDirigente.Text = "Informações do Dirigente";
@@ -485,11 +492,28 @@
             this.lblAtribuicoes.TabIndex = 22;
             this.lblAtribuicoes.Text = "Atribuições";
             // 
+            // txtComplemento
+            // 
+            this.txtComplemento.Location = new System.Drawing.Point(686, 200);
+            this.txtComplemento.MaxLength = 100;
+            this.txtComplemento.Name = "txtComplemento";
+            this.txtComplemento.Size = new System.Drawing.Size(159, 26);
+            this.txtComplemento.TabIndex = 22;
+            // 
+            // lblComplemento
+            // 
+            this.lblComplemento.AutoSize = true;
+            this.lblComplemento.Location = new System.Drawing.Point(686, 177);
+            this.lblComplemento.Name = "lblComplemento";
+            this.lblComplemento.Size = new System.Drawing.Size(108, 20);
+            this.lblComplemento.TabIndex = 23;
+            this.lblComplemento.Text = "Complemento";
+            // 
             // frmGerenciarVoluntarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(870, 561);
+            this.ClientSize = new System.Drawing.Size(880, 561);
             this.Controls.Add(this.gpbInformacoesDirigente);
             this.Controls.Add(this.gpbInformacoesVoluntario);
             this.Controls.Add(this.pnlCRUD);
@@ -551,5 +575,7 @@
         private System.Windows.Forms.DateTimePicker dtpHora;
         private System.Windows.Forms.Label lblData;
         private System.Windows.Forms.DateTimePicker dtpData;
+        private System.Windows.Forms.TextBox txtComplemento;
+        private System.Windows.Forms.Label lblComplemento;
     }
 }

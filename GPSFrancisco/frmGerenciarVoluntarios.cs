@@ -12,6 +12,7 @@ using MySql.Data.MySqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Runtime.ConstrainedExecution;
+using MosaicoSolutions.ViaCep;
 
 namespace GPSFrancisco
 {
@@ -34,6 +35,14 @@ namespace GPSFrancisco
             carregaAtribuicoes();
             desabilitarCamposNovo();
         }
+        //Criando  metodo construtor com parametros
+        public frmGerenciarVoluntarios(string nome)
+        {
+            InitializeComponent();
+            carregaAtribuicoes();
+            desabilitarCamposNovo();
+            txtNome.Text = nome;
+        }
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
@@ -50,6 +59,17 @@ namespace GPSFrancisco
         }
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            if(txtNome.Text.Equals("")||txtEmail.Text.Equals("")||mskTelefone.Text.Equals("(  )      -")|| txtEndereco.Text.Equals("")||txtNumero.Text.Equals("")||mskCEP.Text.Equals("     -")|| txtBairro.Text.Equals("")|| txtCidade.Text.Equals("") || cbbEstado.Text.Equals("") || cbbAtribuicoes.Text.Equals("") || ckbAtivo.Checked == false)
+            {
+                MessageBox.Show("Favor preencher os campos", "Messagem do sistema",MessageBoxButtons.OK,MessageBoxIcon.Error,MessageBoxDefaultButton.Button1);
+                txtNome.Focus();
+            }
+            else
+            {
+                MessageBox.Show("Cadastrado com sucesso.","Messagem do sistema",MessageBoxButtons.OK,MessageBoxIcon.Information,MessageBoxDefaultButton.Button1);
+                limparCamposNovo();
+                desabilitarCamposNovo();
+            }
         }
 
         public int cadastrarVoluntarios(string nome, string email, string telCel,
@@ -138,6 +158,7 @@ namespace GPSFrancisco
             txtBairro.Enabled = false;
             txtCidade.Enabled = false;
             txtNumero.Enabled = false;
+            txtComplemento.Enabled = false;
             mskCEP.Enabled = false;
             mskTelefone.Enabled = false;
             cbbAtribuicoes.Enabled = false;
@@ -164,7 +185,7 @@ namespace GPSFrancisco
             cbbEstado.Enabled = true;
             dtpData.Enabled = true;
             dtpHora.Enabled = true;
-            btnCadastrar.Enabled = false;
+            btnCadastrar.Enabled = true;
             btnExcluir.Enabled = false;
             btnLimpar.Enabled = true;
             txtNome.Focus();
@@ -196,6 +217,46 @@ namespace GPSFrancisco
         private void gpbInformacoesVoluntario_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnNovo_Click(object sender, EventArgs e)
+        {
+            habilitarCamposNovo();
+        }
+        //metodo para buscar o CEP
+        public void buscaCEP(string cep)
+        {
+            var viaCEPService = ViaCepService.Default();
+            try
+            {
+                var endereco = viaCEPService.ObterEndereco(cep);
+
+                txtEndereco.Text = endereco.Logradouro.ToString();
+                txtCidade.Text = endereco.Localidade.ToString();
+                txtBairro.Text = endereco.Bairro.ToString();
+                cbbEstado.Text = endereco.UF.ToString();
+            }
+            catch (Exception) 
+            { 
+                MessageBox.Show("CEP não encontrado.","Messagem do sistema",MessageBoxButtons.OK, MessageBoxIcon.Error,MessageBoxDefaultButton.Button1);
+                mskCEP.Text = "";
+                mskCEP.Focus();
+            }
+        }
+        private void mskCEP_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)            
+            {
+                buscaCEP(mskCEP.Text);
+                txtNumero.Focus();
+            }
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            frmPesquisarVoluntarios abrir = new frmPesquisarVoluntarios();
+            abrir.Show();
+            this.Hide();
         }
     }
 }
