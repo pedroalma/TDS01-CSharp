@@ -7,20 +7,16 @@
       "RelativeMoniker": "D:0:0:{68B27802-E8DE-4497-82AA-E78E4A290440}|GPSFrancisco\\GPSFrancisco.csproj|solutionrelative:gpsfrancisco\\frmpesquisarvoluntarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68B27802-E8DE-4497-82AA-E78E4A290440}|GPSFrancisco\\GPSFrancisco.csproj|c:\\users\\pedro.asebastiao\\documents\\tds01-csharp\\gpsfrancisco\\frmpesquisarvoluntarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{68B27802-E8DE-4497-82AA-E78E4A290440}|GPSFrancisco\\GPSFrancisco.csproj|C:\\Users\\pedro.asebastiao\\Documents\\TDS01-CSharp\\gpsfrancisco\\frmpesquisarvoluntarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{68B27802-E8DE-4497-82AA-E78E4A290440}|GPSFrancisco\\GPSFrancisco.csproj|solutionrelative:gpsfrancisco\\frmpesquisarvoluntarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68B27802-E8DE-4497-82AA-E78E4A290440}|GPSFrancisco\\GPSFrancisco.csproj|c:\\users\\pedro.asebastiao\\documents\\tds01-csharp\\gpsfrancisco\\frmgerenciarvoluntarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{68B27802-E8DE-4497-82AA-E78E4A290440}|GPSFrancisco\\GPSFrancisco.csproj|C:\\Users\\pedro.asebastiao\\Documents\\TDS01-CSharp\\gpsfrancisco\\frmgerenciarvoluntarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{68B27802-E8DE-4497-82AA-E78E4A290440}|GPSFrancisco\\GPSFrancisco.csproj|solutionrelative:gpsfrancisco\\frmgerenciarvoluntarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68B27802-E8DE-4497-82AA-E78E4A290440}|GPSFrancisco\\GPSFrancisco.csproj|c:\\users\\pedro.asebastiao\\documents\\tds01-csharp\\gpsfrancisco\\frmgerenciarvoluntarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{68B27802-E8DE-4497-82AA-E78E4A290440}|GPSFrancisco\\GPSFrancisco.csproj|C:\\Users\\pedro.asebastiao\\Documents\\TDS01-CSharp\\gpsfrancisco\\frmgerenciarvoluntarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{68B27802-E8DE-4497-82AA-E78E4A290440}|GPSFrancisco\\GPSFrancisco.csproj|solutionrelative:gpsfrancisco\\frmgerenciarvoluntarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{68B27802-E8DE-4497-82AA-E78E4A290440}|GPSFrancisco\\GPSFrancisco.csproj|C:\\Users\\pedro.asebastiao\\Documents\\TDS01-CSharp\\gpsfrancisco\\frmsplash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68B27802-E8DE-4497-82AA-E78E4A290440}|GPSFrancisco\\GPSFrancisco.csproj|solutionrelative:gpsfrancisco\\frmsplash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -40,9 +36,9 @@
               "RelativeDocumentMoniker": "GPSFrancisco\\frmPesquisarVoluntarios.cs",
               "ToolTip": "C:\\Users\\pedro.asebastiao\\Documents\\TDS01-CSharp\\GPSFrancisco\\frmPesquisarVoluntarios.cs",
               "RelativeToolTip": "GPSFrancisco\\frmPesquisarVoluntarios.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAuwCEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowDAAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T12:48:06.803Z",
+              "WhenOpened": "2025-06-04T11:32:22.189Z",
               "EditorCaption": ""
             },
             {
@@ -81,19 +77,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-02T11:20:01.089Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "frmSplash.cs",
-              "DocumentMoniker": "C:\\Users\\pedro.asebastiao\\Documents\\TDS01-CSharp\\GPSFrancisco\\frmSplash.cs",
-              "RelativeDocumentMoniker": "GPSFrancisco\\frmSplash.cs",
-              "ToolTip": "C:\\Users\\pedro.asebastiao\\Documents\\TDS01-CSharp\\GPSFrancisco\\frmSplash.cs",
-              "RelativeToolTip": "GPSFrancisco\\frmSplash.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACcAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T14:21:04.941Z",
-              "EditorCaption": ""
             }
           ]
         }
